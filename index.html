@@ -112,19 +112,14 @@
 
         $("#myList").empty();
         cityData = await getCityData();
-        console.log(cityData);
-
         //讀取健保局資料
         maskData = await getMaskData();
-        console.log(maskData);
-
         //產生縣市選單
         renderCityOption(cityData);
 
         //監聽縣市選單
         $("#cityOption").on("change", function () {
           $("#areaOption").prop("disabled", false);
-          console.log($(this).val());
           selectedCity = $(this).val();
 
           $("#areaOption").empty();
@@ -145,7 +140,6 @@
 
         //監聽鄉鎮選單
         $("#areaOption").on("change", function () {
-          console.log($(this).val());
           selectedArea = $(this).val();
 
           //過濾健保局的藥局資料
@@ -230,8 +224,6 @@
             }
           });
 
-          console.log(markerMap);
-
           if (count == 0) {
             $("#myList").append(
               `<li class="list-group-item h1 text-muted text-center py-4"> 該區域沒有藥局資料!</li>`
@@ -242,8 +234,6 @@
         //監聽myList選單
         $("#myList").on("click", ".list-group-item", function () {
           const key = $(this).data("key");
-          console.log(key);
-
           const marker = markerMap[key];
           if (!marker) {
             return;
