@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
+:root {
+  --navy-blue: #00142f; /* 深藏青色，接近海軍藍 */
+  --dark-brown: #321e17; /* 深咖啡色 */
+  --warm-taupe: #b98d72; /* 溫暖的棕灰色／肉桂咖啡色 */
+  --rosewood: #ae4951; /* 深玫瑰木紅／酒紅帶粉調 */
+  --beige: #ead6bd; /* 淺米色／奶油色 */
+  --wine-red: #57233a; /* 葡萄酒紅，帶點紫紅調 */
+  --camel-brown: #a88661; /* 駱駝棕，略帶橘的棕色 */
+  --slate-gray: #504e63; /* 石板灰，帶一點藍紫的灰 */
+  --linen: #e4dace; /*亞麻*/
+}
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+.bg-01 {
+  background-color: var(--navy-blue);
+}
+.bg-02 {
+  background-color: var(--dark-brown);
+}
+.bg-03 {
+  background-color: var(--warm-taupe);
+}
+.bg-04 {
+  background-color: var(--rosewood);
+}
+.bg-05 {
+  background-color: var(--beige);
+}
+.bg-06 {
+  background-color: var(--wine-red);
+}
+.bg-07 {
+  background-color: var(--camel-brown);
+}
+.bg-08 {
+  background-color: var(--slate-gray);
+}
+.bg-09 {
+  background-color: var(--linen);
+}
+.text-01 {
+  color: #ff943c;
+}
+.text-02 {
+  color: #8939f1;
+}
+.text-03 {
+  color: #f5f5e7;
+}
+.text-04 {
+  color: #ffee00;
+  text-shadow: 0px 0px 5px rgb(216, 43, 0);
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+/* 上到下 */
+.roller-top {
+  position: relative;
+  overflow: hidden;
+}
+.roller_box-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateY(-100%);
+  transition: 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roller-top:hover .roller_box-top {
+  transform: translateY(0%);
+}
+
+/* 下到上 */
+.roller-bottom {
+  position: relative;
+  overflow: hidden;
+}
+.roller_box-bottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateY(100%);
+  transition: 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roller-bottom:hover .roller_box-bottom {
+  transform: translateY(0%);
+}
+
+/* 右到左 */
+.roller-right {
+  position: relative;
+  overflow: hidden;
+}
+.roller_box-right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roller-right:hover .roller_box-right {
+  transform: translateY(0%);
+}
+
+/* 左到右 */
+.roller-left {
+  position: relative;
+  overflow: hidden;
+}
+.roller_box-left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roller-left:hover .roller_box-left {
+  transform: translateY(0%);
+}
+
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+
+.abCentor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@font-face {
+  font-family: font01;
+  src: url(../字體庫/宅在家粉條甜.ttf);
+}
+
+@font-face {
+  font-family: font02;
+  src: url(../字體庫//jf-openhuninn-2.1.ttf);
+}
+
+@font-face {
+  font-family: font03;
+  src: url(../字體庫//DotGothic16-Regular.ttf);
+}
+@font-face {
+  font-family: font04;
+  src: url(../字體庫//SourceHanSansTC-VF.ttf);
+}
+@font-face {
+  font-family: font05;
+  src: url(../字體庫//Cubic_11.ttf);
+}
+.font01 {
+  font-family: font01;
+}
+
+.font02 {
+  font-family: font02;
+}
+
+.font03 {
+  font-family: font03;
+}
+
+.font04 {
+  font-family: font04;
+  font-weight: 700;
+}
+.font05 {
+  font-family: font05;
+}
+
+/* 光暈 */
+.textshadow1 {
+  color: white;
+  background-color: #333;
+  text-shadow: 0 0 20px #ff6600;
+}
+
+/* 內嵌 */
+.textshadow2 {
+  color: #717171;
+  background-color: #d3d3d3;
+  text-shadow: 0 1px 1px white;
+}
+
+/* 浮凸 */
+.textshadow3 {
+  color: #cccccc;
+  background-color: #d3d3d3;
+  text-shadow: -1px -1px #ffffff, 1px 1px #333333;
+}
+
+/* 立體 */
+.textshadow4 {
+  color: #fff;
+  background-color: #3699f6;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb,
+    0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa;
+}
+
+/* 霓虹燈效果（Neon Glow） */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.textshadow-neon {
+  color: #0ff;
+  background: linear-gradient(270deg, #000000, #001f1f, #003f3f, #000000);
+  background-size: 600% 600%;
+  animation: gradientBG 8s ease infinite;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  padding: 20px;
+  display: inline-block;
+}
+
+/* 復古 3D 效果（Retro 3D） */
+.textshadow-retro {
+  color: #fff;
+  background-color: #000;
+  text-shadow: 2px 2px 0 #ff0000, 4px 4px 0 #00ff00, 6px 6px 0 #0000ff;
+}
+
+/* 陰影堆疊效果（Long Shadow） */
+.textshadow-long {
+  color: #fff;
+  background-color: #333;
+  text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222, 4px 4px #222,
+    5px 5px #222;
+}
+
+/* 火焰文字（Fire Text） */
+.textshadow-fire {
+  color: orange;
+  background-color: #111;
+  text-shadow: 0 0 5px yellow, 0 0 10px orange, 0 0 20px red, 0 0 30px darkred;
+}
+
+/* 柔焦玻璃感（Frosted Glass Text） */
+.textshadow-glass {
+  color: rgba(255, 255, 255, 0.8);
+  background: #1a1a1a;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+/* 彩虹字（Rainbow Text） – 搭配 animation */
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+.textshadow-rainbow {
+  background-color: #000;
+  animation: rainbow 3s infinite;
+  text-shadow: 0 0 10px #fff;
+}
